@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="20188" name="justinzane_black_contrast_x" modified="2013-09-18 05:59:09" author="Justin Chudgar" website="http://www.justinzane.com/static/justinzane_black_contrast.tar.xz">
+    <searchResultIndication color="#3F0000" />
+    <filteredSearchResultIndication color="#5F0000" />
+    <occurrenceIndication color="#00003F" />
+    <writeOccurrenceIndication color="#00FF00" />
+    <findScope color="#1F1F3F" />
+    <deletionIndication color="#FF0000" underline="false" strikethrough="true" />
+    <sourceHoverBackground color="#1F0F04" />
+    <singleLineComment color="#5F5F5F" italic="false" />
+    <multiLineComment color="#5F5F5F" italic="false" />
+    <commentTaskTag color="#FF7F00" bold="true" italic="false" />
+    <javadoc color="#AF7F5F" italic="false" />
+    <javadocLink color="#AF7F5F" italic="false" underline="true" strikethrough="false" />
+    <javadocTag color="#FF7F00" bold="true" italic="false" />
+    <javadocKeyword color="#FF7F00" italic="true" underline="false" strikethrough="false" />
+    <class color="#00FFFF" bold="false" underline="false" strikethrough="false" />
+    <interface color="#00FFFF" bold="false" italic="true" />
+    <method color="#FFFFFF" bold="false" />
+    <methodDeclaration color="#FFFFFF" bold="false" />
+    <bracket color="#00FF00" bold="false" />
+    <number color="#FF0000" />
+    <string color="#FF0000" />
+    <operator color="#00FF00" bold="false" />
+    <keyword color="#00FF00" bold="false" />
+    <annotation color="#9F5F9F" italic="true" />
+    <staticMethod color="#FFFFFF" italic="true" />
+    <localVariable color="#FFFF00" />
+    <localVariableDeclaration color="#FFFF00" bold="false" />
+    <field color="#FFFF00" />
+    <staticField color="#FFFF00" italic="true" />
+    <staticFinalField color="#FFFF1F" italic="true" />
+    <deprecatedMember color="#AF5F00" underline="false" strikethrough="false" />
+    <enum color="#1F1FFF" />
+    <inheritedMethod color="#CFCFCF" />
+    <abstractMethod color="#FFFF7F" italic="true" />
+    <parameterVariable color="#79ABFF" />
+    <typeArgument color="#7F3FCF" />
+    <typeParameter color="#7F3FCF" />
+    <constant color="#0000CF" underline="false" strikethrough="false" />
+    <background color="#000000" />
+    <currentLine color="#002F00" />
+    <foreground color="#00FF00" />
+    <lineNumber color="#2F4F2F" />
+    <selectionBackground color="#2F2F2F" />
+    <selectionForeground color="#2FFF2F" />
+</colorTheme>

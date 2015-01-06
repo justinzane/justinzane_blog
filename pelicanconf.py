@@ -2,10 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+LOAD_CONTENT_CACHE = False
+
 #----- Site Info
 AUTHOR = 'Justin [Zane] Chudgar'
 SITENAME = 'justinzane'
 SITEURL = 'file:///home/justin/src/justinzane_blog/output'
+RELATIVE_URLS = True
 # DATE_FORMATS = {'en_US': '%Y-%m-%d', }
 # LOCALE = 'en_US'
 TIMEZONE = 'America/Los_Angeles'
@@ -19,16 +22,24 @@ DEFAULT_LANG = 'en'
 DEFAULT_PAGINATION = 10
 
 #----- Feeds
-# CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
-# FEED_ALL_ATOM = 'feeds/all.atom.xml'
-# FEED_DOMAIN = SITEURL
-# FEED_MAX_ITEMS = 10
-# TRANSLATION_FEED_ATOM = None
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_DOMAIN = SITEURL
+FEED_MAX_ITEMS = 10
+TRANSLATION_FEED_ATOM = None
 
 #----- Blogroll
-LINKS = [('Pelican', 'http://getpelican.com/'),
+LINKS = [('**Arch**', 'https://wiki.archlinux.org/index.php/The_Arch_Way'),
+         ('Pelican', 'http://getpelican.com/'),
+         ('PyMarkdown', 'http://pythonhosted.org/Markdown/extensions/index.html'),
          ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'), ]
+         ('Jinja2', 'http://jinja.pocoo.org/'),
+         ('Sheldon Brown', 'http://www.sheldonbrown.com/'),
+         ('Ken Rockwell Photography', 'http://www.kenrockwell.com/index.htm'),
+         ('KEH Cameras', 'http://www.keh.com/'),
+         ('PopeHat', 'http://www.popehat.com/'),
+         ('The Art of Manliness', 'http://www.artofmanliness.com/'),
+         ]
 
 #----- Social widget
 SOCIAL = [('GitHub', 'https://github.com/justinzane'),
@@ -45,7 +56,7 @@ SOCIAL = [('GitHub', 'https://github.com/justinzane'),
 DELETE_OUTPUT_DIRECTORY = True
 MARKUP = ('rst', 'md',)
 OUTPUT_PATH = 'output/'
-PAGE_DIR = 'pages'
+PAGE_PATHS = ['pages',]
 PATH = 'content/'
 # PATH_METADATA ('')     Like FILENAME_METADATA, but parsed from a page’s full path relative to
 #                        the content source directory.
@@ -59,26 +70,40 @@ TAG_CLOUD_MAX_ITEMS = 100
 #----- Processing Options
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
-# FILES_TO_COPY = ['content/robots.txt', ]
 IGNORE_FILES = ['.#*']
 NEWEST_FIRST_ARCHIVES = True
 OUTPUT_SOURCES = False
 # OUTPUT_SOURCES_EXTENSION = '.txt'
 PDF_GENERATOR = False
-RELATIVE_URLS = False
 REVERSE_CATEGORY_ORDER = False
-STATIC_PATHS = ['images', ]
 SUMMARY_MAX_LENGTH = 50
 TYPOGRIFY = False
 
+# Take advantage of the following defaults
+# STATIC_SAVE_AS = '{path}'
+# STATIC_URL = '{path}'
+# Replaces: FILES_TO_COPY = (('robots.txt', 'robots.txt'),)
+STATIC_PATHS = [
+    'extra/robots.txt',
+    'images',
+]
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+}
+
 #----- Plugins
-PLUGIN_PATH = 'plugins'
-PLUGINS = ['neighbors', 'related_posts', 'sitemap', 'disqus_static']
+PLUGIN_PATHS = ['plugins',]
+PLUGINS = ['gzip_cache',
+		   'neighbors',
+		   'related_posts',
+		   'sitemap',
+#		   'disqus_static',
+		   ]
 DISQUS_SITENAME = u'justinzane'
 DISQUS_SECRET_KEY = u'0fo3fvZXFsZqt75mywsF7WzYtC1VIRrMQiXMTZysS9tnfuxHx6nWlMPlrjcYa1vH'
 DISQUS_PUBLIC_KEY = u'Xlmynh3kr5QOGPSZ9UjYaLWBaqaq2WCJxrFM6lak3BqnHVKXSH8sxL1hc777xW6y'
 GOOGLE_ANALYTICS = "UA-2357728-2"
-
+GOOGLE_ADSENSE_ID = "pub-317407888633431"
 RELATED_POSTS_MAX = 5
 SITEMAP = {
     'format': 'xml',
@@ -112,7 +137,30 @@ THEME = 'themes/darkweight'
 # EXTRA_TEMPLATES_PATHS ([])     A list of paths you want Jinja2 to search for templates. Can be used to separate templates from the theme. Example: projects, resume, profile ... These templates need to use DIRECT_TEMPLATES setting.
 
 #-----------------------------------------
-MD_EXTENSIONS = (['admonition', 'codehilite', 'extra', 'cite', 'video',
-                  'semanticdata', 'semanticwikilinks', 'sane_lists', 'toc'])
+# abbr
+# attr_list
+# def_list
+# fenced_code
+# footnotes
+# headerid
+# meta
+# nl2br
+# sane_lists
+# smart_strong
+# smarty
+# tables
+# toc
+# wikilinks
+
+MD_EXTENSIONS = (['admonition',
+                  'codehilite',
+                  'extra',
+                  'cite',
+#                  'video',
+                  'semanticdata',
+                  'semanticwikilinks',
+                  'sane_lists',
+                  'tables',
+                  'toc'])
 #       http://pythonhosted.org/Markdown/extensions/index.html
 # ASCIIDOC_OPTIONS ([])     A list of options to pass to AsciiDoc. See the manpage

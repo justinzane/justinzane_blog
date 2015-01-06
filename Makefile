@@ -2,7 +2,7 @@ PY=python3
 PELICAN=pelican
 PELICANOPTS=
 
-BASEDIR=$(CURDIR)
+BASEDIR="/home/justin/src/justinzane_blog/"
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
@@ -65,7 +65,7 @@ stopserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
-
+	
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 

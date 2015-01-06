@@ -65,7 +65,7 @@ damage.
 
 ##Pelican
 
-![pelican](static/images/pelican_clipart_01.jpg "Pelican")
+![pelican](images/pelican_clipart_01.jpg "Pelican")
 
 > Pelican is a simple static blog generator. It parses markup files (Markdown or 
 reStructuredText for now) and generates an HTML folder with all the files in it. I’ve chosen to 
