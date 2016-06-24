@@ -2,7 +2,7 @@ PY=python3
 PELICAN=pelican
 PELICANOPTS=
 
-BASEDIR="/home/justin/src/justinzane_blog/"
+BASEDIR="/home/justin/syncthing/docs/justinzane_blog/"
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
